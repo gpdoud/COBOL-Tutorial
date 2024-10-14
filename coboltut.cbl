@@ -1,0 +1,38 @@
+       >> SOURCE FORMAT FREE
+ID DIVISION.
+PROGRAM-ID. coboltut.
+AUTHOR. Greg.
+DATE-WRITTEN. OCTOBER 13, 2024.
+
+ENVIRONMENT DIVISION.
+
+DATA DIVISION.
+FILE SECTION.
+WORKING-STORAGE SECTION.
+01 UserName PIC X(30) VALUE "Greg".
+01 Nbr1 PIC 9 VALUE ZEROS.
+01 Nbr2 PIC 9 VALUE ZEROS.
+01 Total PIC 99 VALUE 0.
+01 SSN.
+       02 SSNArea      PIC 999.
+       02 SSNGroup     PIC 99.
+       02 SSNSerial    PIC 9999.
+01 PI CONSTANT AS 3.1415.
+*> This is a comment
+
+PROCEDURE DIVISION.
+DISPLAY "What is your name? " WITH NO ADVANCING.
+ACCEPT UserName.
+DISPLAY "Hello " UserName.
+
+DISPLAY "Enter two numbers:".
+ACCEPT Nbr1.
+ACCEPT Nbr2.
+COMPUTE Total = Nbr1 + Nbr2.
+DISPLAY Nbr1 " + " Nbr2 " = " Total.
+
+DISPLAY "Enter SSN".
+ACCEPT SSN.
+DISPLAY "SSN last four is " SSNSerial.
+
+STOP RUN.
